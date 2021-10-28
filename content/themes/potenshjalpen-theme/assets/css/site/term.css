@@ -1,0 +1,82 @@
+.term-tags {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 40px;
+    justify-content: center;
+}
+
+.term-tags .tag {
+    margin-right: 20px;
+    margin-bottom: 10px;
+    color: var(--dark-gray-color);
+    font-weight: 700;
+}
+
+.term-tags .tag-current {
+    color: var(--dark-gray-color);
+    padding: 2px 2px 3px 6px;
+    border-bottom: 2px solid;
+}
+
+@media (max-width: 767px) {
+
+    .term-tags {
+        flex-wrap: nowrap;
+        -webkit-overflow-scrolling: touch;
+        overflow-x: scroll;
+        justify-content: flex-start;
+    }
+
+    .term-tags::-webkit-scrollbar {
+        height: 7px;
+    }
+
+    .term-tags::-webkit-scrollbar-track {
+        background: #406a6e;
+        border-radius: 20px;
+    }
+
+    .term-tags::-webkit-scrollbar-thumb {
+        background-color: var(--dark-gray-color);
+        border-radius: 40px;
+        border: 1px solid #406a6e;
+      }
+
+    .term-tags .tag {
+        white-space: nowrap;
+        background: var(--light-gray-color);
+        border-radius: 20px;
+        padding: 0 11px;
+        margin: 0 5px 10px;
+        line-height: 22px;
+    }
+
+    .term-tags .tag.tag-current {
+        border-bottom: 0;
+        background: var(--accent-color);
+    }
+
+    .term-tags .tag-count {
+        display: none;
+    }
+}
+
+.term-author {
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.term-author .author-image-placeholder {
+    margin-right: 15px;
+    width: 40px;
+    height: 40px;
+}
+
+.term-author .author-name {
+    font-size: 20px;
+}
+
+.term-author .author-name::after {
+    display: none;
+}

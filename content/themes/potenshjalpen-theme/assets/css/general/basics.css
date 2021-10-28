@@ -1,0 +1,273 @@
+:root {
+    --primary-color: var(--ghost-accent-color, #2ec4b6);
+    --primary-text-color: #333;
+    --secondary-text-color: rgb(117, 117, 117);
+    --white-color: #fff;
+    --light-gray-color: #f4f4f4;
+    --mid-gray-color: #e9e9e9;
+    --dark-gray-color: #1a1a1a;
+    --accent-color: #e3c64f;
+    --transparent: transparent;
+    --black-color: #000;
+    --font-base: "KarlaRegular", sans-serif;
+    --font-header: "AvenirDemiBold", sans-serif;
+    --font-header-alt: "KarlaBold", sans-serif;
+    --animation-base: ease-in-out;
+    --shadow-base: 0 0 10px rgba(0, 0, 0, 0.02);
+}
+
+@font-face {
+	font-family: 'AvenirBold';
+	src:url('../fonts/avenir-next-bold.eot?w118d');
+	src:url('../fonts/avenir-next-bold.eot?#iefixw118d') format('embedded-opentype'),
+		url('../fonts/avenir-next-bold.woff2?w118d') format('woff2'),
+		url('../fonts/avenir-next-bold.woff?w118d') format('woff'),
+		url('../fonts/avenir-next-bold.ttf?w118d') format('truetype'),
+		url('../fonts/avenir-next-bold.svg?w118d#Linearicons-Free') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'AvenirDemiBold';
+	src:url('../fonts/avenir-next-demi-bold.eot?w118d');
+	src:url('../fonts/avenir-next-demi-bold.eot?#iefixw118d') format('embedded-opentype'),
+		url('../fonts/avenir-next-demi-bold.woff2?w118d') format('woff2'),
+		url('../fonts/avenir-next-demi-bold.woff?w118d') format('woff'),
+		url('../fonts/avenir-next-demi-bold.ttf?w118d') format('truetype'),
+		url('../fonts/avenir-next-demi-bold.svg?w118d#Linearicons-Free') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'KarlaRegular';
+    src: url('../fonts/karla-regular-webfont.woff2') format('woff2'),
+         url('../fonts/karla-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'KarlaBold';
+    src: url('../fonts/karla-bold-webfont.woff2') format('woff2'),
+         url('../fonts/karla-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'KarlaItalic';
+    src: url('../fonts/karla-italic-webfont.woff2') format('woff2'),
+         url('../fonts/karla-italic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'KarlaBoldItalic';
+    src: url('../fonts/karla-bolditalic-webfont.woff2') format('woff2'),
+         url('../fonts/karla-bolditalic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    color: var(--primary-text-color);
+    font-family: var(--font-base);
+    font-size: 14px;
+    line-height: 1.65;
+    text-rendering: optimizeLegibility;
+    word-break: break-word;
+    background-color: var(--light-gray-color);
+    background-color: #f9f9f9;
+    transition: background-color 0.3s var(--animation-base);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-image: linear-gradient(0deg, rgb(202, 234, 233) 70%, rgb(75, 131, 138) 100%);
+}
+
+a {
+    color: var(--dark-gray-color);
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3 {
+    margin: 0 0 15px;
+    color: var(--dark-gray-color);
+    font-family: var(--font-header);
+    line-height: 1.3;
+    font-weight: normal;
+}
+
+h4,
+h5,
+h6 {
+    margin: 0 0 15px;
+    color: var(--dark-gray-color);
+    font-family: var(--font-base);
+    line-height: 1.3;
+    font-weight: normal;
+}
+
+.intro-wrapper {
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+.intro-wrapper::before {
+    content: "";
+    display: block;
+    background: url(../images/book.svg) 0 0 no-repeat;
+    background-size: cover;
+    position: relative;
+    width: 190px;
+    height: 190px;
+    margin: 0 auto;
+}
+
+h1.main-tag {
+    font-family: 'AvenirBold', sans-serif;
+    font-size: 4.6em;
+    line-height: 1.1;
+    margin-top: 0.4em;
+    text-align: center;
+}
+
+p.tag-preamble {
+    font-size: 1.3em;
+    text-align: center;
+    padding: 0 4em;
+    margin: 0 auto 4em auto;
+}
+
+.tag .tag-count {
+    background: var(--accent-color);
+    border-radius: 90px;
+    color: var(--dark-gray-color);
+    display: inline-block;
+    font-size: 10px;
+    height: 15px;
+    line-height: 15px;
+    margin-left: 4px;
+    position: relative;
+    text-align: center;
+    top: -7px;
+    width: 15px;
+}
+
+@media (max-width: 767px) {
+    .intro-wrapper::before {
+        width: 30vw;
+        height: 30vw;
+    }
+    h1.main-tag {
+        padding-top: 0.4em;
+        font-size: 1.8em;
+    }
+
+    p.tag-preamble {
+        padding: 0;
+        font-size: 1.1em;
+    }
+}
+
+
+p {
+    margin: 0 0 20px;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+blockquote {
+    margin: 30px auto;
+    padding: 5px 0 5px 15px;
+    border-left: 4px solid var(--dark-gray-color);
+    color: var(--dark-gray-color);
+    font-size: 18px;
+    line-height: 1.4;
+}
+
+ul,
+ol {
+    margin: 30px 0;
+    padding-left: 30px;
+}
+
+li {
+    margin: 5px 0;
+}
+
+iframe,
+embed {
+    display: block;
+    overflow: hidden;
+    width: 100%;
+    border: 0;
+}
+
+figure {
+    margin: 45px 0;
+}
+
+figcaption {
+    margin-top: 15px;
+    color: var(--dark-gray-color);
+    font-size: 14px;
+    text-align: center;
+}
+
+pre {
+    overflow-x: scroll;
+    margin: 30px 0;
+}
+
+hr {
+    position: relative;
+    margin: 45px auto;
+    width: 5px;
+    height: 5px;
+    border: 0;
+    background-color: var(--dark-gray-color);
+    border-radius: 50%;
+}
+
+hr::before,
+hr::after {
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background-color: var(--dark-gray-color);
+    border-radius: 50%;
+}
+
+hr::before {
+    right: 20px;
+}
+
+hr::after {
+    left: 20px;
+}
